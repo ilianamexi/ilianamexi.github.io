@@ -3,37 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Κωνσταντίνα-Ηλιάνα Μέξη | Βιοϊατρική Πληροφορική & AI</title>
+    <title>Κωνσταντίνα-Ηλιάνα Μέξη — Ακαδημαϊκό & Ερευνητικό Βιογραφικό</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts for Academic & Professional Aesthetics -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary: #0f172a;        /* Slate 900 */
-            --primary-muted: #334155;  /* Slate 700 */
-            --accent: #2563eb;         /* Royal Blue */
-            --accent-light: #eff6ff;   /* Light Blue Accent */
-            --accent-hover: #1d4ed8;
-            --emerald: #059669;        /* Success Green */
-            --emerald-bg: #ecfdf5;
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --bg-main: #f8fafc;
+            --primary: #111827;         /* Almost Black for maximum contrast */
+            --accent: #1e3a8a;          /* Deep Navy Academic Blue */
+            --text-body: #27272a;       /* High legibility text */
+            --text-muted: #52525b;      /* Muted grey */
+            --bg-page: #f4f4f5;         /* Subtle paper-like background */
             --card-bg: #ffffff;
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-        }
-
-        html {
-            scroll-behavior: smooth;
+            --border: #d4d4d8;
+            --border-light: #e4e4e7;
         }
 
         * {
@@ -43,829 +32,313 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            line-height: 1.6;
+            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            line-height: 1.65;
+            padding: 40px 15px;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* STICKY GLASS NAVBAR */
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 14px 0;
-        }
-
-        .nav-container {
-            max-width: 1050px;
+        .cv-container {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: 1.15rem;
-            color: var(--primary);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-logo span {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* MAIN WRAPPER */
-        .main-container {
-            max-width: 1050px;
-            margin: 32px auto;
-            padding: 0 24px;
-        }
-
-        /* HERO SECTION */
-        .hero-card {
             background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 48px;
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 32px;
-            position: relative;
-            overflow: hidden;
+            padding: 55px 65px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border-radius: 4px;
         }
 
-        .hero-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent) 0%, #3b82f6 50%, #06b6d4 100%);
+        /* HEADER SECTION */
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 25px;
+            margin-bottom: 35px;
         }
 
-        .hero-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 32px;
-            flex-wrap: wrap;
-        }
-
-        .hero-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--emerald-bg);
-            color: var(--emerald);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            margin-bottom: 18px;
-            border: 1px solid rgba(5, 150, 105, 0.2);
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--emerald);
-            border-radius: 50%;
-            box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(5, 150, 105, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
-        }
-
-        .hero-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1.15;
-            margin-bottom: 10px;
-            letter-spacing: -0.8px;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .hero-affiliation {
-            font-size: 0.98rem;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .avatar-box {
-            width: 110px;
-            height: 110px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Space Grotesk', sans-serif;
+        .name {
+            font-family: 'Merriweather', serif;
             font-size: 2.2rem;
             font-weight: 700;
-            box-shadow: var(--shadow-md);
-            border: 3px solid #ffffff;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
         }
 
-        .cta-group {
+        .subtitle {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        .institution {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+        }
+
+        .contact-grid {
             display: flex;
-            gap: 12px;
             flex-wrap: wrap;
+            gap: 18px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding-top: 10px;
+            border-top: 1px solid var(--border-light);
         }
 
-        .btn {
+        .contact-item {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
+            gap: 6px;
+        }
+
+        .contact-item a {
+            color: var(--accent);
             text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: #ffffff;
-            border: 1px solid var(--accent);
-            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background: var(--card-bg);
-            color: var(--primary);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            background: var(--accent-light);
-            border-color: #cbd5e1;
-            color: var(--accent);
-        }
-
-        /* METRICS / STATS BANNER */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        .stat-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .stat-number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent);
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
         }
 
         /* SECTION STYLING */
         section {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 36px 40px;
-            margin-bottom: 32px;
-            box-shadow: var(--shadow-sm);
+            margin-bottom: 35px;
         }
 
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
+        .section-header {
+            font-family: 'Merriweather', serif;
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
-        }
-
-        .section-title i {
-            color: var(--accent);
-            font-size: 1.2rem;
-        }
-
-        .about-text {
-            font-size: 1.02rem;
-            color: var(--primary-muted);
-            line-height: 1.75;
-        }
-
-        /* PUBLICATIONS / RESEARCH CARDS */
-        .pub-card {
-            background: #fafafa;
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--accent);
-            border-radius: 8px;
-            padding: 22px;
-            margin-bottom: 20px;
-            transition: all 0.2s ease;
-        }
-
-        .pub-card:hover {
-            background: #ffffff;
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-
-        .pub-status {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 4px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 8px;
+            border-bottom: 1.5px solid var(--accent);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .status-submitted {
-            background: #fef3c7;
-            color: #d97706;
-            border: 1px solid #fde68a;
-        }
-
-        .status-prep {
-            background: #e0e7ff;
-            color: #4338ca;
-            border: 1px solid #c7d2fe;
-        }
-
-        .pub-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 6px;
-        }
-
-        .pub-authors {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-        }
-
-        .pub-authors .author-me {
-            color: var(--primary);
-            font-weight: 700;
-            text-decoration: underline;
-        }
-
-        .pub-venue {
-            font-size: 0.88rem;
-            font-style: italic;
+        .section-header i {
             color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
 
-        .pub-desc {
-            font-size: 0.93rem;
-            color: var(--primary-muted);
+        /* ENTRY BLOCK STYLING */
+        .entry-block {
+            margin-bottom: 22px;
         }
 
-        /* TIMELINE (EDUCATION & EXPERIENCE) */
-        .timeline {
-            position: relative;
-            padding-left: 24px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 8px;
-            bottom: 8px;
-            width: 2px;
-            background: var(--border-color);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 28px;
-        }
-
-        .timeline-item:last-child {
+        .entry-block:last-child {
             margin-bottom: 0;
         }
 
-        .timeline-dot {
-            position: absolute;
-            left: -24px;
-            top: 6px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--accent);
-            border: 3px solid #ffffff;
-            box-shadow: 0 0 0 1px var(--border-color);
-        }
-
-        .timeline-header {
+        .entry-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
-        .timeline-role {
-            font-size: 1.08rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .timeline-date {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            background: var(--accent-light);
-            padding: 2px 10px;
-            border-radius: 12px;
-        }
-
-        .timeline-org {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-
-        .timeline-body {
-            font-size: 0.94rem;
-            color: var(--primary-muted);
-        }
-
-        /* PROJECTS GRID */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 22px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.2s ease;
-        }
-
-        .project-card:hover {
-            border-color: var(--accent);
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-
-        .project-tag {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .project-title {
+        .entry-title {
             font-size: 1.05rem;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 8px;
         }
 
-        .project-desc {
+        .entry-date {
             font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-            flex-grow: 1;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .tech-chip {
-            background: var(--bg-main);
-            color: var(--primary-muted);
-            font-size: 0.78rem;
             font-weight: 600;
-            padding: 3px 8px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
+            color: var(--text-muted);
         }
 
-        /* SKILLS CATEGORIES */
-        .skills-wrapper {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+        .entry-sub {
+            font-size: 0.96rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 6px;
         }
 
-        .skill-box {
+        .entry-details {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            text-align: justify;
+        }
+
+        .bullet-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 6px;
+        }
+
+        .bullet-list li {
+            margin-bottom: 6px;
+            font-size: 0.94rem;
+        }
+
+        .bullet-list li strong {
+            color: var(--primary);
+        }
+
+        /* HIGHLIGHTED PAPERS */
+        .paper-card {
             background: #fafafa;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
+            border: 1px solid var(--border-light);
+            border-left: 3.5px solid var(--accent);
+            padding: 16px 20px;
+            margin-bottom: 18px;
+            border-radius: 2px;
         }
 
-        .skill-box-title {
-            font-size: 0.9rem;
+        .paper-title {
+            font-weight: 700;
+            font-size: 1.02rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .paper-status {
+            font-size: 0.88rem;
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        /* SKILLS TABLE / GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 12px 20px;
+            font-size: 0.93rem;
+            align-items: start;
+        }
+
+        .skills-category {
             font-weight: 700;
             color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            border-right: 2px solid var(--border-light);
+            padding-right: 10px;
         }
 
-        .skill-box-title i {
-            color: var(--accent);
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-pill {
-            background: #ffffff;
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 5px 12px;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 1px 1px rgba(0,0,0,0.02);
+        .skills-content {
+            color: var(--text-body);
         }
 
         /* FOOTER */
         footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
             text-align: center;
-            padding: 40px 0;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            font-size: 0.88rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 40px;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero-card { padding: 28px; }
-            .hero-title { font-size: 2rem; }
-            .nav-links { display: none; } /* Simplified mobile */
-            section { padding: 24px; }
+            .cv-container { padding: 30px 25px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .skills-category { border-right: none; border-bottom: 1px solid var(--border-light); padding-bottom: 2px; }
+            .entry-header { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Κωνσταντίνα-Ηλιάνα <span>Μέξη</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">Σχετικά</a></li>
-                <li><a href="#research">Έρευνα</a></li>
-                <li><a href="#education">Σπουδές</a></li>
-                <li><a href="#experience">Εμπειρία</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Δεξιότητες</a></li>
+<div class="cv-container">
+
+    <!-- HEADER / PERSONAL DETAILS -->
+    <header>
+        <h1 class="name">Κωνσταντίνα-Ηλιάνα Μέξη</h1>
+        <div class="subtitle">Πληροφορική με Εφαρμογές στη Βιοϊατρική</div>
+        <div class="institution">Πανεπιστήμιο Θεσσαλίας</div>
+        
+        <div class="contact-grid">
+            <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Μαραθώνας, Αττική</div>
+            <div class="contact-item"><i class="fa-solid fa-phone"></i> 6986823602</div>
+            <div class="contact-item"><i class="fa-solid fa-cake-candles"></i> 20 Ιουλίου 2004</div>
+            <div class="contact-item"><i class="fa-brands fa-github"></i> <a href="https://github.com/ilianamexi" target="_blank">github.com/ilianamexi</a></div>
+            <div class="contact-item"><i class="fa-solid fa-file-pdf"></i> <a href="CV_Mexi_.pdf" target="_blank">Download PDF CV</a></div>
+        </div>
+    </header>
+
+    <!-- ΣΠΟΥΔΕΣ -->
+    <section>
+        <h2 class="section-header"><i class="fa-solid fa-graduation-cap"></i> Σπουδές</h2>
+
+        <div class="entry-block">
+            <div class="entry-header">
+                <span class="entry-title">Πανεπιστήμιο Θεσσαλίας</span>
+            </div>
+            <div class="entry-sub">Μεταπτυχιακό Δίπλωμα Ειδίκευσης (MSc)</div>
+            <div class="entry-details">
+                Πληροφορική και Υπολογιστική Βιοϊατρική, Κατεύθυνση: <strong>Υπολογιστική Ιατρική και Βιολογία</strong>.
+            </div>
+        </div>
+
+        <div class="entry-block" style="margin-top: 14px;">
+            <div class="entry-header">
+                <span class="entry-title">Πανεπιστήμιο Θεσσαλίας</span>
+            </div>
+            <div class="entry-sub">Προπτυχιακό Δίπλωμα (BSc) — Τμήμα Πληροφορικής με Εφαρμογές στη Βιοϊατρική</div>
+            <div class="entry-details">
+                Ανοιχτές Κατευθύνσεις: <strong>Ρομποτικά Συστήματα</strong>, <strong>Τεχνητή Νοημοσύνη</strong>, <strong>Βιοπληροφορική</strong>.
+            </div>
+        </div>
+
+        <div class="entry-block" style="margin-top: 14px;">
+            <div class="entry-header">
+                <span class="entry-title">Δευτεροβάθμια Εκπαίδευση</span>
+            </div>
+            <div class="entry-details">
+                • <strong>Γυμνάσιο:</strong> Σχολή Καλογεροπούλου<br>
+                • <strong>Λύκειο:</strong> ΓΕΛ Νέας Μάκρης
+            </div>
+        </div>
+    </section>
+
+    <!-- ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ -->
+    <section>
+        <h2 class="section-header"><i class="fa-solid fa-scroll"></i> Πτυχιακή Εργασία</h2>
+        <div class="entry-block">
+            <div class="entry-title" style="color: var(--accent);">
+                Continuous Glucose Monitoring (CGM) με Χρήση Τεχνητής Νοημοσύνης και Mobile App
+            </div>
+            <div class="entry-details" style="margin-top: 6px;">
+                Ανάπτυξη ολοκληρωμένου συστήματος συνεχούς μέτρησης γλυκόζης με ενσωμάτωση αλγορίθμων Τεχνητής Νοημοσύνης (AI) για πρόβλεψη και ανάλυση μετρήσεων, σε συνδυασμό με αυτόνομη εφαρμογή για κινητές συσκευές.
+            </div>
+        </div>
+    </section>
+
+    <!-- ΕΡΕΥΝΗΤΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ & ΔΗΜΟΣΙΕΥΣΕΙΣ -->
+    <section>
+        <h2 class="section-header"><i class="fa-solid fa-book-bookmark"></i> Ερευνητική Δραστηριότητα & Δημοσιεύσεις</h2>
+
+        <div class="paper-card">
+            <div class="paper-title">On-Device Edge AI for Real-Time Glucose Forecasting and Experimental Safety Filtering in T1D</div>
+            <div class="paper-status">Υποβλήθηκε στο MIE 2027 (Medical Informatics Europe)</div>
+            <ul class="bullet-list">
+                <li><strong>Αρχιτεκτονική:</strong> Πρόβλεψη γλυκόζης 60 λεπτών (12 βήματα) μέσω μοντέλου νευρωνικού δικτύου (MLP) που εκτελείται εξ ολοκλήρου στη συσκευή (on-device inference) σε εφαρμογή Flutter για κινητό, με προσομοίωση αισθητήρα CGM μέσω ESP32 και Bluetooth Low Energy (BLE).</li>
+                <li><strong>Safety Filtering:</strong> Πειραματικός μηχανισμός ελέγχου των προβλέψεων πριν από οποιαδήποτε προσομοιωμένη εντολή ινσουλίνης (αναστολή βασικού ρυθμού, bolus) — αποκλειστικά προσομοίωση, χωρίς πραγματική αντλία.</li>
+                <li><strong>Αξιολόγηση:</strong> Δοκιμή σε πραγματικά κλινικά δεδομένα (OhioT1DM) με επίτευξη RMSE 32.25 mg/dL έναντι 38.36 mg/dL του persistence baseline (≈16% μείωση), αποκλεισμό παραθύρων που εκτείνονται σε κενά μετρήσεων και ανάλυση κλινικής ακρίβειας μέσω error grid.</li>
             </ul>
         </div>
-    </nav>
 
-    <div class="main-container">
-
-        <!-- HERO SECTION -->
-        <div class="hero-card">
-            <div class="hero-header">
-                <div class="hero-info">
-                    <div class="status-badge">
-                        <span class="status-dot"></span>
-                        Available for AI & Research Collaborations
-                    </div>
-                    <h1 class="hero-title">Κωνσταντίνα-Ηλιάνα Μέξη</h1>
-                    <p class="hero-subtitle">Ερευνήτρια Βιοϊατρικής Πληροφορικής & Τεχνητής Νοημοσύνης</p>
-                    <p class="hero-affiliation">
-                        <i class="fa-solid fa-building-columns"></i>
-                        Πανεπιστήμιο Θεσσαλίας — Τμήμα Πληροφορικής με Εφαρμογές στη Βιοϊατρική
-                    </p>
-                    <p class="hero-affiliation" style="margin-top: -16px;">
-                        <i class="fa-solid fa-location-dot"></i>
-                        Μαραθώνας, Αττική &nbsp;|&nbsp; <i class="fa-solid fa-phone"></i> +30 6986823602
-                    </p>
-
-                    <div class="cta-group">
-                        <a href="CV_Mexi_.pdf" target="_blank" class="btn btn-primary">
-                            <i class="fa-solid fa-file-pdf"></i> Download CV (PDF)
-                        </a>
-                        <a href="https://github.com/ilianamexi" target="_blank" class="btn btn-secondary">
-                            <i class="fa-brands fa-github"></i> GitHub
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">
-                            <i class="fa-brands fa-linkedin"></i> LinkedIn
-                        </a>
-                    </div>
-                </div>
-
-                <div class="avatar-box">
-                    ΚΜ
-                </div>
-            </div>
+        <div class="paper-card">
+            <div class="paper-title">Machine Learning Framework for High-Dimensional Data</div>
+            <div class="paper-status">Paper υπό συγγραφή</div>
+            <ul class="bullet-list">
+                <li><strong>Αντικείμενο:</strong> Αλγοριθμικό πλαίσιο Μηχανικής Μάθησης για ταξινόμηση υψηλοδιάστατων γονιδιοματικών δεδομένων (microarrays) σε 10 καρκινικούς τύπους, με επιτυγχανόμενο F1-Score > 0.89.</li>
+                <li><strong>Αρχιτεκτονική & Ερμηνευσιμότητα:</strong> Πολλαπλές τυχαίες προβολές (Random Projections) με ταξινομητές LDA και νευρωνικό meta-classifier, προσφέροντας αυτόματη αναγνώριση γονιδιακών βιοδεικτών.</li>
+            </ul>
         </div>
+    </section>
 
-        <!-- METRICS COUNTER -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">MSc & BSc</div>
-                <div class="stat-label">Βιοϊατρική Πληροφορική</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">MIE 2027</div>
-                <div class="stat-label">Submitted Research Paper</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">Edge AI & BLE</div>
-                <div class="stat-label">CGM Medical Systems</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">Genekor Medical</div>
-                <div class="stat-label">BRCA1/2 ACMG Pipeline</div>
-            </div>
-        </div>
-
-        <!-- ABOUT SECTION -->
-        <section id="about">
-            <h2 class="section-title"><i class="fa-solid fa-user-astronaut"></i> Ερευνητικό Προφίλ</h2>
-            <p class="about-text">
-                Εξειδικεύομαι στην εφαρμογή αλγορίθμων <strong>Machine Learning & Edge AI</strong> σε Βιοϊατρικά Δεδομένα και Ιατρική Απεικόνιση. Το ερευνητικό μου έργο επικεντρώνεται στην ανάπτυξη μοντέλων τεχνητής νοημοσύνης χαμηλής υπολογιστικής κατανάλωσης (On-Device Inference) για συστήματα συνεχούς μέτρησης γλυκόζης (CGM), στην ταξινόμηση γονιδιωματικών δεδομένων υψηλής διαστατικότητας (microarrays) και στην επεξεργασία ιατρικών εικόνων (DICOM, Computer Vision).
-            </p>
-        </section>
-
-        <!-- RESEARCH & PUBLICATIONS -->
-        <section id="research">
-            <h2 class="section-title"><i class="fa-solid fa-book-bookmark"></i> Ερευνητική Δραστηριότητα & Δημοσιεύσεις</h2>
-
-            <div class="pub-card">
-                <span class="pub-status status-submitted">Submitted — MIE 2027</span>
-                <div class="pub-title">On-Device Edge AI for Real-Time Glucose Forecasting and Experimental Safety Filtering in T1D</div>
-                <div class="pub-authors">
-                    <span class="author-me">Κωνσταντίνα-Ηλιάνα Μέξη</span>, κ.ά.
-                </div>
-                <div class="pub-venue">Medical Informatics Europe (MIE 2027) / IOS Press</div>
-                <p class="pub-desc">
-                    Πρόβλεψη γλυκόζης 60 λεπτών (12 βήματα) με μοντέλο MLP εξ ολοκλήρου στη συσκευή (Flutter app), προσομοίωση αισθητήρα CGM μέσω ESP32/BLE και πειραματικό safety filtering σε κλινικά δεδομένα OhioT1DM (RMSE 32.25 mg/dL, ~16% βελτίωση έναντι του persistence baseline).
-                </p>
-            </div>
-
-            <div class="pub-card" style="border-left-color: #6366f1;">
-                <span class="pub-status status-prep">Under Preparation</span>
-                <div class="pub-title">Machine Learning Framework for High-Dimensional Genomic Data Classification</div>
-                <div class="pub-authors">
-                    <span class="author-me">Κωνσταντίνα-Ηλιάνα Μέξη</span>, κ.ά.
-                </div>
-                <div class="pub-venue">Journal Submission in Prep</div>
-                <p class="pub-desc">
-                    Αλγοριθμικό πλαίσιο για ταξινόμηση γονιδιωματικών δεδομένων (microarrays) σε 10 καρκινικούς τύπους με F1-Score > 0.89. Αρχιτεκτονική με πολλαπλές τυχαίες προβολές (Random Projections), ταξινομητές LDA και νευρωνικό meta-classifier για αυτόματη αναγνώριση γονιδιακών βιοδεικτών.
-                </p>
-            </div>
-        </section>
-
-        <!-- EDUCATION -->
-        <section id="education">
-            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Ακαδημαϊκές Σπουδές</h2>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <span class="timeline-role">Μεταπτυχιακό Δίπλωμα Ειδίκευσης (MSc)</span>
-                        <span class="timeline-date">Πανεπιστήμιο Θεσσαλίας</span>
-                    </div>
-                    <div class="timeline-org">Πληροφορική και Υπολογιστική Βιοϊατρική</div>
-                    <div class="timeline-body">
-                        Ειδίκευση: <strong>Υπολογιστική Ιατρική και Βιολογία</strong>. Εστιάζει σε προηγμένους αλγορίθμους μηχανικής μάθησης, βιοπληροφορική και ανάλυση κλινικών δεδομένων μεγάλης κλίμακας.
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <span class="timeline-role">Πτυχίο Πληροφορικής με Εφαρμογές στη Βιοϊατρική (BSc)</span>
-                        <span class="timeline-date">Πανεπιστήμιο Θεσσαλίας</span>
-                    </div>
-                    <div class="timeline-org">Ανοιχτές Κατευθύνσεις: Τεχνητή Νοημοσύνη, Ρομποτικά Συστήματα, Βιοπληροφορική</div>
-                    <div class="timeline-body">
-                        <strong>Πτυχιακή Εργασία:</strong> <em>"Continuous Glucose Monitoring (CGM) με Χρήση Τεχνητής Νοημοσύνης και Mobile App"</em>. Ανάπτυξη ολοκληρωμένου συστήματος μέτρησης γλυκόζης με ενσωμάτωση αλγορίθμων AI για πρόβλεψη και ανάλυση μετρήσεων μέσω εφαρμογής για κινητά.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- EXPERIENCE -->
-        <section id="experience">
-            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Επαγγελματική Εμπειρία & Πρακτική Άσκηση</h2>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot" style="background: var(--emerald);"></div>
-                    <div class="timeline-header">
-                        <span class="timeline-role">Πρακτική Άσκηση — Βιοϊατρική Πληροφορική</span>
-                        <span class="timeline-date">Ιούλιος 2025 – Αύγουστος 2025</span>
-                    </div>
-                    <div class="timeline-org">Genekor Medical S.A.</div>
-                    <div class="timeline-body">
-                        Ανάπτυξη εξειδικευμένου συστήματος φιλτραρίσματος και ταξινόμησης γενετικών παραλλαγών <strong>BRCA1/2</strong> βάσει των διεθνών οδηγιών ACMG (PS1, PM5, PP5, BP6) και παροχή αποτελεσμάτων μέσω REST API.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS GRID -->
-        <section id="projects">
-            <h2 class="section-title"><i class="fa-solid fa-microchip"></i> Projects & Ερευνητικά Εργαστήρια</h2>
-
-            <div class="project-grid">
-                <div class="project-card">
-                    <div>
-                        <div class="project-tag">Computer Vision & Medical Imaging</div>
-                        <div class="project-title">Medical Image Analysis Suite</div>
-                        <p class="project-desc">
-                            Segmentation κυτταρικών πυρήνων με Watershed transform, Affine registration αμφιβληστροειδικών εικόνων, ανάλυση δυναμικού νεφρογραφήματος (DICOM) και ποιοτικός έλεγχος γ-κάμερας (MTF & Homogeneity).
-                        </p>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-chip">MATLAB</span>
-                        <span class="tech-chip">Python</span>
-                        <span class="tech-chip">DICOM</span>
-                        <span class="tech-chip">OpenCV</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div>
-                        <div class="project-tag">Data Science & Deep Learning</div>
-                        <div class="project-title">Genomic & Clinical Analytics</div>
-                        <p class="project-desc">
-                            Πρόβλεψη σταδίου Ηπατίτιδας C από βιοδείκτες αίματος (SMOTE & Random Forest) και συγκριτική αξιολόγηση μεθόδων NNV-MRPV & Random Projections σε γονιδιακά δεδομένα υψηλής διαστατικότητας.
-                        </p>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-chip">Python</span>
-                        <span class="tech-chip">scikit-learn</span>
-                        <span class="tech-chip">Keras</span>
-                        <span class="tech-chip">imbalanced-learn</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div>
-                        <div class="project-tag">Research Team</div>
-                        <div class="project-title">Hermes Team (ISL Lab)</div>
-                        <p class="project-desc">
-                            Μέλος της ομάδας Hermes (Kinematics & Control) στο Εργαστήριο Ευφυών Υπολογιστικών Συστημάτων (2023–σήμερα). Συμμετοχή σε projects ενσωματωμένων συστημάτων και Τεχνητής Νοημοσύνης.
-                        </p>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-chip">Embedded Systems</span>
-                        <span class="tech-chip">Control</span>
-                        <span class="tech-chip">AI</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SKILLS CATEGORIES -->
-        <section id="skills">
-            <h2 class="section-title"><i class="fa-solid fa-gears"></i> Τεχνικές Δεξιότητες & Εργαλεία</h2>
-
-            <div class="skills-wrapper">
-                <div class="skill-box">
-                    <div class="skill-box-title"><i class="fa-solid fa-code"></i> Γλώσσες Προγραμματισμού</div>
-                    <div class="skill-tags">
-                        <span class="skill-pill">Python</span>
-                        <span class="skill-pill">SQL</span>
-                        <span class="skill-pill">MATLAB</span>
-                        <span class="skill-pill">C / C++</span>
-                        <span class="skill-pill">Java</span>
-                        <span class="skill-pill">Dart</span>
-                        <span class="skill-pill">JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-box-title"><i class="fa-solid fa-brain"></i> AI & Machine Learning</div>
-                    <div class="skill-tags">
-                        <span class="skill-pill">scikit-learn</span>
-                        <span class="skill-pill">TensorFlow / Keras</span>
-                        <span class="skill-pill">Neural Networks (MLP, CNN)</span>
-                        <span class="skill-pill">Random Forest</span>
-                        <span class="skill-pill">LDA</span>
-                        <span class="skill-pill">Edge AI / On-Device</span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-box-title"><i class="fa-solid fa-dna"></i> Βιοϊατρικά Δεδομένα & Mobile</div>
-                    <div class="skill-tags">
-                        <span class="skill-pill">DICOM</span>
-                        <span class="skill-pill">Computer Vision</span>
-                        <span class="skill-pill">Microarrays</span>
-                        <span class="skill-pill">Flutter</span>
-                        <span class="skill-pill">ESP32 & BLE</span>
-                        <span class="skill-pill">Linux</span>
-                        <span class="skill-pill">LaTeX</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>© 2026 Κωνσταντίνα-Ηλιάνα Μέξη — Hosted on GitHub Pages</p>
-        </footer>
-
-    </div>
-
-</body>
-</html>
+    <!-- ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ & Π
