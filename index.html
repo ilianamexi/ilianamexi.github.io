@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Κωνσταντίνα-Ηλιάνα Μέξη — Ακαδημαϊκό & Ερευνητικό Βιογραφικό</title>
+    <title>ΜΕΞΗ ΚΩΝΣΤΑΝΤΙΝΑ-ΗΛΙΑΝΑ — Βιογραφικό Σημείωμα</title>
 
-    <!-- Google Fonts for Academic & Professional Aesthetics -->
+    <!-- Google Fonts for High Academic Standards -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary: #111827;         /* Almost Black for maximum contrast */
-            --accent: #1e3a8a;          /* Deep Navy Academic Blue */
-            --text-body: #27272a;       /* High legibility text */
-            --text-muted: #52525b;      /* Muted grey */
-            --bg-page: #f4f4f5;         /* Subtle paper-like background */
+            --primary: #1a202c;         /* Primary Dark Slate */
+            --accent: #1e3a8a;          /* Academic Navy Blue */
+            --text-main: #2d3748;       /* High Contrast Body Text */
+            --text-muted: #4a5568;      /* Secondary Text */
+            --bg-page: #f7fafc;         /* Clean Light Gray Background */
             --card-bg: #ffffff;
-            --border: #d4d4d8;
-            --border-light: #e4e4e7;
+            --border-color: #cbd5e0;
+            --border-light: #e2e8f0;
         }
 
         * {
@@ -32,67 +32,69 @@
         }
 
         body {
-            font-family: 'Source Sans 3', -apple-system, sans-serif;
+            font-family: 'Roboto', -apple-system, sans-serif;
             background-color: var(--bg-page);
-            color: var(--text-body);
-            line-height: 1.65;
+            color: var(--text-main);
+            line-height: 1.6;
             padding: 40px 15px;
             -webkit-font-smoothing: antialiased;
         }
 
         .cv-container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 55px 65px;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-            border-radius: 4px;
+            padding: 60px 70px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-radius: 2px;
         }
 
-        /* HEADER SECTION */
+        /* HEADER */
         header {
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 25px;
-            margin-bottom: 35px;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .name {
             font-family: 'Merriweather', serif;
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             font-weight: 700;
             color: var(--primary);
-            letter-spacing: -0.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 6px;
         }
 
-        .subtitle {
+        .header-title {
             font-size: 1.15rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--accent);
             margin-bottom: 4px;
         }
 
-        .institution {
+        .header-univ {
             font-size: 1rem;
+            font-weight: 500;
             color: var(--text-muted);
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
-        .contact-grid {
+        .contact-bar {
             display: flex;
             flex-wrap: wrap;
-            gap: 18px;
-            font-size: 0.9rem;
+            gap: 15px 25px;
+            font-size: 0.92rem;
             color: var(--text-muted);
-            padding-top: 10px;
+            padding-top: 12px;
             border-top: 1px solid var(--border-light);
         }
 
         .contact-item {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .contact-item a {
@@ -105,38 +107,53 @@
             text-decoration: underline;
         }
 
-        /* SECTION STYLING */
+        /* SECTIONS */
         section {
-            margin-bottom: 35px;
+            margin-bottom: 32px;
         }
 
-        .section-header {
+        .section-title {
             font-family: 'Merriweather', serif;
             font-size: 1.25rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border-bottom: 1.5px solid var(--accent);
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            padding-bottom: 4px;
+            margin-bottom: 18px;
         }
 
-        .section-header i {
-            color: var(--accent);
-            font-size: 1.1rem;
+        /* SUBSECTIONS */
+        .subsection-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 14px;
+            margin-bottom: 8px;
+            text-decoration: underline;
         }
 
-        /* ENTRY BLOCK STYLING */
+        /* LISTS & TEXT */
+        ul.cv-list {
+            list-style-type: disc;
+            padding-left: 22px;
+            margin-top: 6px;
+            margin-bottom: 12px;
+        }
+
+        ul.cv-list li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        ul.cv-list li strong {
+            color: var(--primary);
+        }
+
         .entry-block {
-            margin-bottom: 22px;
-        }
-
-        .entry-block:last-child {
-            margin-bottom: 0;
+            margin-bottom: 16px;
         }
 
         .entry-header {
@@ -144,12 +161,11 @@
             justify-content: space-between;
             align-items: baseline;
             flex-wrap: wrap;
-            margin-bottom: 3px;
         }
 
-        .entry-title {
-            font-size: 1.05rem;
+        .entry-main {
             font-weight: 700;
+            font-size: 1.02rem;
             color: var(--primary);
         }
 
@@ -161,81 +177,52 @@
 
         .entry-sub {
             font-size: 0.96rem;
-            font-weight: 600;
+            font-weight: 500;
             color: var(--accent);
-            margin-bottom: 6px;
-        }
-
-        .entry-details {
-            font-size: 0.95rem;
-            color: var(--text-body);
-            text-align: justify;
-        }
-
-        .bullet-list {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-top: 6px;
-        }
-
-        .bullet-list li {
-            margin-bottom: 6px;
-            font-size: 0.94rem;
-        }
-
-        .bullet-list li strong {
-            color: var(--primary);
-        }
-
-        /* HIGHLIGHTED PAPERS */
-        .paper-card {
-            background: #fafafa;
-            border: 1px solid var(--border-light);
-            border-left: 3.5px solid var(--accent);
-            padding: 16px 20px;
-            margin-bottom: 18px;
-            border-radius: 2px;
+            margin-bottom: 4px;
         }
 
         .paper-title {
             font-weight: 700;
             font-size: 1.02rem;
             color: var(--primary);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .paper-status {
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             font-style: italic;
             color: var(--accent);
             font-weight: 600;
             margin-bottom: 6px;
         }
 
-        /* SKILLS TABLE / GRID */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 12px 20px;
-            font-size: 0.93rem;
-            align-items: start;
+        /* SKILLS TABLE */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
         }
 
-        .skills-category {
+        .skills-table td {
+            padding: 8px 10px;
+            vertical-align: top;
+            font-size: 0.93rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .skills-table td.cat {
+            width: 230px;
             font-weight: 700;
             color: var(--primary);
+            background-color: #f8fafc;
             border-right: 2px solid var(--border-light);
-            padding-right: 10px;
-        }
-
-        .skills-content {
-            color: var(--text-body);
         }
 
         /* FOOTER */
         footer {
-            margin-top: 50px;
-            padding-top: 20px;
+            margin-top: 40px;
+            padding-top: 15px;
             border-top: 1px solid var(--border-light);
             text-align: center;
             font-size: 0.85rem;
@@ -243,10 +230,20 @@
         }
 
         @media (max-width: 768px) {
-            .cv-container { padding: 30px 25px; }
-            .skills-grid { grid-template-columns: 1fr; }
-            .skills-category { border-right: none; border-bottom: 1px solid var(--border-light); padding-bottom: 2px; }
-            .entry-header { flex-direction: column; }
+            .cv-container { padding: 30px 20px; }
+            .skills-table, .skills-table tbody, .skills-table tr, .skills-table td {
+                display: block;
+                width: 100%;
+            }
+            .skills-table td.cat {
+                border-right: none;
+                border-bottom: none;
+                background: transparent;
+                padding-bottom: 2px;
+                font-size: 0.95rem;
+                color: var(--accent);
+            }
+            .skills-table td { padding-top: 2px; padding-bottom: 10px; }
         }
     </style>
 </head>
@@ -254,91 +251,188 @@
 
 <div class="cv-container">
 
-    <!-- HEADER / PERSONAL DETAILS -->
+    <!-- HEADER / PERSONAL INFORMATION -->
     <header>
-        <h1 class="name">Κωνσταντίνα-Ηλιάνα Μέξη</h1>
-        <div class="subtitle">Πληροφορική με Εφαρμογές στη Βιοϊατρική</div>
-        <div class="institution">Πανεπιστήμιο Θεσσαλίας</div>
+        <h1 class="name">ΜΕΞΗ ΚΩΝΣΤΑΝΤΙΝΑ-ΗΛΙΑΝΑ</h1>
+        <div class="header-title">Πληροφορικής με Εφαρμογές στη Βιοϊατρική</div>
+        <div class="header-univ">Πανεπιστήμιο Θεσσαλίας</div>
         
-        <div class="contact-grid">
+        <div class="contact-bar">
             <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Μαραθώνας, Αττική</div>
             <div class="contact-item"><i class="fa-solid fa-phone"></i> 6986823602</div>
-            <div class="contact-item"><i class="fa-solid fa-cake-candles"></i> 20 Ιουλίου 2004</div>
+            <div class="contact-item"><i class="fa-solid fa-cake-candles"></i> Ημ. Γέννησης: 20 Ιουλίου 2004</div>
             <div class="contact-item"><i class="fa-brands fa-github"></i> <a href="https://github.com/ilianamexi" target="_blank">github.com/ilianamexi</a></div>
-            <div class="contact-item"><i class="fa-solid fa-file-pdf"></i> <a href="CV_Mexi_.pdf" target="_blank">Download PDF CV</a></div>
+            <div class="contact-item"><i class="fa-solid fa-file-pdf"></i> <a href="CV_Mexi_.pdf" target="_blank">Download CV (PDF)</a></div>
         </div>
     </header>
 
     <!-- ΣΠΟΥΔΕΣ -->
     <section>
-        <h2 class="section-header"><i class="fa-solid fa-graduation-cap"></i> Σπουδές</h2>
+        <h2 class="section-title">ΣΠΟΥΔΕΣ</h2>
 
         <div class="entry-block">
-            <div class="entry-header">
-                <span class="entry-title">Πανεπιστήμιο Θεσσαλίας</span>
-            </div>
-            <div class="entry-sub">Μεταπτυχιακό Δίπλωμα Ειδίκευσης (MSc)</div>
-            <div class="entry-details">
-                Πληροφορική και Υπολογιστική Βιοϊατρική, Κατεύθυνση: <strong>Υπολογιστική Ιατρική και Βιολογία</strong>.
-            </div>
+            <div class="entry-main">Πανεπιστήμιο Θεσσαλίας</div>
+            <ul class="cv-list">
+                <li><strong>Προπτυχιακό:</strong> Τμήμα Πληροφορικής με Εφαρμογές στη Βιοϊατρική<br>
+                    <em>Ανοιχτές Κατευθύνσεις:</em> Ρομποτικά Συστήματα, Τεχνητή Νοημοσύνη, Βιοπληροφορική
+                </li>
+                <li><strong>Μεταπτυχιακό:</strong> Πληροφορική και Υπολογιστική Βιοϊατρική, Υπολογιστική Ιατρική και Βιολογία</li>
+            </ul>
         </div>
 
-        <div class="entry-block" style="margin-top: 14px;">
-            <div class="entry-header">
-                <span class="entry-title">Πανεπιστήμιο Θεσσαλίας</span>
-            </div>
-            <div class="entry-sub">Προπτυχιακό Δίπλωμα (BSc) — Τμήμα Πληροφορικής με Εφαρμογές στη Βιοϊατρική</div>
-            <div class="entry-details">
-                Ανοιχτές Κατευθύνσεις: <strong>Ρομποτικά Συστήματα</strong>, <strong>Τεχνητή Νοημοσύνη</strong>, <strong>Βιοπληροφορική</strong>.
-            </div>
+        <div class="entry-block">
+            <div class="entry-main">Δευτεροβάθμια Εκπαίδευση</div>
+            <ul class="cv-list">
+                <li><strong>Γυμνάσιο:</strong> Σχολή Καλογεροπούλου</li>
+                <li><strong>Λύκειο:</strong> ΓΕΛ Νέας Μάκρης</li>
+            </ul>
         </div>
+    </section>
 
-        <div class="entry-block" style="margin-top: 14px;">
-            <div class="entry-header">
-                <span class="entry-title">Δευτεροβάθμια Εκπαίδευση</span>
-            </div>
-            <div class="entry-details">
-                • <strong>Γυμνάσιο:</strong> Σχολή Καλογεροπούλου<br>
-                • <strong>Λύκειο:</strong> ΓΕΛ Νέας Μάκρης
-            </div>
-        </div>
+    <!-- ΤΕΧΝΙΚΕΣ ΔΕΞΙΟΤΗΤΕΣ -->
+    <section>
+        <h2 class="section-title">ΤΕΧΝΙΚΕΣ ΔΕΞΙΟΤΗΤΕΣ (TECHNICAL SKILLS)</h2>
+        
+        <table class="skills-table">
+            <tr>
+                <td class="cat">Γλώσσες Προγραμματισμού:</td>
+                <td>Python, SQL, MATLAB, C/C++, Java, Dart, JavaScript</td>
+            </tr>
+            <tr>
+                <td class="cat">Βάσεις Δεδομένων:</td>
+                <td>SQL, PostgreSQL</td>
+            </tr>
+            <tr>
+                <td class="cat">Τεχνητή Νοημοσύνη & Μηχανική Μάθηση:</td>
+                <td>scikit-learn, TensorFlow, Keras, Neural Networks (MLP, CNN), Random Forest, LDA, Random Projections, SMOTE (imbalanced-learn), Cross-Validation, Edge AI / On-Device Inference</td>
+            </tr>
+            <tr>
+                <td class="cat">Ανάλυση Δεδομένων:</td>
+                <td>pandas, Data Cleaning, Imputation, Exploratory Data Analysis</td>
+            </tr>
+            <tr>
+                <td class="cat">Βιοϊατρικά Δεδομένα & Ιατρική Απεικόνιση:</td>
+                <td>DICOM, Computer Vision, Image Segmentation, Image Registration, Gene Expression Data (Microarrays), Clinical Datasets, CGM Data</td>
+            </tr>
+            <tr>
+                <td class="cat">Mobile & Embedded:</td>
+                <td>Flutter, ESP32, BLE, Arduino</td>
+            </tr>
+            <tr>
+                <td class="cat">Εργαλεία & Πλατφόρμες:</td>
+                <td>Linux, Windows, Azure, Wireshark, LaTeX</td>
+            </tr>
+        </table>
     </section>
 
     <!-- ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ -->
     <section>
-        <h2 class="section-header"><i class="fa-solid fa-scroll"></i> Πτυχιακή Εργασία</h2>
+        <h2 class="section-title">ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ</h2>
         <div class="entry-block">
-            <div class="entry-title" style="color: var(--accent);">
-                Continuous Glucose Monitoring (CGM) με Χρήση Τεχνητής Νοημοσύνης και Mobile App
-            </div>
-            <div class="entry-details" style="margin-top: 6px;">
-                Ανάπτυξη ολοκληρωμένου συστήματος συνεχούς μέτρησης γλυκόζης με ενσωμάτωση αλγορίθμων Τεχνητής Νοημοσύνης (AI) για πρόβλεψη και ανάλυση μετρήσεων, σε συνδυασμό με αυτόνομη εφαρμογή για κινητές συσκευές.
-            </div>
+            <div class="entry-main" style="color: var(--accent);">Continuous Glucose Monitoring (CGM) με Χρήση Τεχνητής Νοημοσύνης και Mobile App</div>
+            <p style="font-size: 0.95rem; margin-top: 4px;">
+                Ανάπτυξη συστήματος συνεχούς μέτρησης γλυκόζης με ενσωμάτωση αλγορίθμων AI για πρόβλεψη και ανάλυση μετρήσεων, σε συνδυασμό με εφαρμογή για κινητά.
+            </p>
         </div>
+    </section>
+
+    <!-- COMPUTER VISION & MEDICAL IMAGING -->
+    <section>
+        <h2 class="section-title">COMPUTER VISION & MEDICAL IMAGING</h2>
+
+        <div class="subsection-title">Υπολογιστική Όραση</div>
+        <ul class="cv-list">
+            <li><strong>Μοντελοποίηση Pinhole Camera</strong> — Κατασκευή extrinsic camera matrix και προβολή 3D σημείων mesh σε 2D εικόνα (MATLAB).</li>
+            <li><strong>Segmentation Κυτταρικών Πυρήνων</strong> — Τμηματοποίηση εικόνων μικροσκοπίας με watershed transform και εξαγωγή μορφομετρικών χαρακτηριστικών (εμβαδόν, περίμετρος, συμμετρία) (MATLAB).</li>
+            <li><strong>Καταχώρηση Ιατρικών Εικόνων (Image Registration)</strong> — Affine ευθυγράμμιση ζευγών αμφιβληστροειδικών εικόνων με ground-truth ομόλογα σημεία, αξιολόγηση με correlation coefficient & mutual information (MATLAB).</li>
+            <li><strong>Ταξινόμηση Εικόνων με CNN</strong> — Fine-tuning προεκπαιδευμένων δικτύων (AlexNet/VGG16) στο dataset CALTECH101, με ανάλυση confusion matrix και hyperparameters.</li>
+        </ul>
+
+        <div class="subsection-title">Συστήματα Ιατρικής Απεικόνισης</div>
+        <ul class="cv-list">
+            <li><strong>Ποιοτικός Έλεγχος γ-Κάμερας (MTF & Homogeneity)</strong> — Μέτρηση Modulation Transfer Function από εικόνες quadrant phantom και υπολογισμός ανομοιογένειας πεδίου (field uniformity) γ-κάμερας (Python).</li>
+            <li><strong>Ανάλυση Δυναμικού Νεφρογραφήματος (DICOM)</strong> — Εξαγωγή μεταδεδομένων DICOM (ραδιοϊσότοπο, energy window, πλήθος frames) και υπολογισμός καμπυλών ενεργότητας νεφρών (ROI-based) με διόρθωση υποβάθρου, σε anterior/posterior λήψεις (Python).</li>
+            <li><strong>Προσομοίωση Ραδιογραφικής Εικόνας</strong> — Μοντελοποίηση σχηματισμού ακτινογραφίας μέσω εξασθένησης ακτίνων X (νόμος Beer-Lambert) σε ετερογενές αντικείμενο, με προσομοίωση θορύβου Poisson σε διαφορετικά επίπεδα φωτονικής ροής (Python).</li>
+        </ul>
+    </section>
+
+    <!-- DATA SCIENCE PROJECTS -->
+    <section>
+        <h2 class="section-title">DATA SCIENCE PROJECTS</h2>
+
+        <div class="subsection-title">Εξόρυξη Δεδομένων Μεγάλου Όγκου</div>
+        <ul class="cv-list">
+            <li><strong>Πρόβλεψη Σταδίου Ηπατίτιδας C από Βιοδείκτες Αίματος</strong> — Πλήρες pipeline ανάλυσης κλινικού dataset (615 δείγματα): καθαρισμός δεδομένων και median imputation, exploratory analysis με correlation heatmap, εξισορρόπηση κλάσεων με SMOTE και εκπαίδευση Random Forest για multi-class classification (5 διαγνωστικά στάδια), αξιολόγηση με Recall/F1 (Python: pandas, scikit-learn, imbalanced-learn).</li>
+        </ul>
+
+        <div class="subsection-title">Βαθιά Μάθηση</div>
+        <ul class="cv-list">
+            <li><strong>Σύγκριση Μεθόδων Ταξινόμησης σε Γονιδιακά Δεδομένα Υψηλής Διαστατικότητας</strong> — Συγκριτική αξιολόγηση Random Forest, SMV-MRPV και NNV-MRPV (τυχαίες προβολές + LDA + νευρωνικό δίκτυο ως meta-learner) σε τρία ιατρικά datasets γονιδιακής έκφρασης (leukemia, colon, prostate) με Stratified 5-Fold Cross-Validation· εμπειρική επικύρωση της μεθόδου NNV-MRPV από το ερευνητικό της paper (Python: scikit-learn, TensorFlow/Keras).</li>
+        </ul>
     </section>
 
     <!-- ΕΡΕΥΝΗΤΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ & ΔΗΜΟΣΙΕΥΣΕΙΣ -->
     <section>
-        <h2 class="section-header"><i class="fa-solid fa-book-bookmark"></i> Ερευνητική Δραστηριότητα & Δημοσιεύσεις</h2>
+        <h2 class="section-title">ΕΡΕΥΝΗΤΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ & ΔΗΜΟΣΙΕΥΣΕΙΣ</h2>
 
-        <div class="paper-card">
+        <div class="entry-block">
             <div class="paper-title">On-Device Edge AI for Real-Time Glucose Forecasting and Experimental Safety Filtering in T1D</div>
             <div class="paper-status">Υποβλήθηκε στο MIE 2027 (Medical Informatics Europe)</div>
-            <ul class="bullet-list">
-                <li><strong>Αρχιτεκτονική:</strong> Πρόβλεψη γλυκόζης 60 λεπτών (12 βήματα) μέσω μοντέλου νευρωνικού δικτύου (MLP) που εκτελείται εξ ολοκλήρου στη συσκευή (on-device inference) σε εφαρμογή Flutter για κινητό, με προσομοίωση αισθητήρα CGM μέσω ESP32 και Bluetooth Low Energy (BLE).</li>
-                <li><strong>Safety Filtering:</strong> Πειραματικός μηχανισμός ελέγχου των προβλέψεων πριν από οποιαδήποτε προσομοιωμένη εντολή ινσουλίνης (αναστολή βασικού ρυθμού, bolus) — αποκλειστικά προσομοίωση, χωρίς πραγματική αντλία.</li>
-                <li><strong>Αξιολόγηση:</strong> Δοκιμή σε πραγματικά κλινικά δεδομένα (OhioT1DM) με επίτευξη RMSE 32.25 mg/dL έναντι 38.36 mg/dL του persistence baseline (≈16% μείωση), αποκλεισμό παραθύρων που εκτείνονται σε κενά μετρήσεων και ανάλυση κλινικής ακρίβειας μέσω error grid.</li>
+            <ul class="cv-list">
+                <li>Πρόβλεψη γλυκόζης 60 λεπτών (12 βήματα): μοντέλο νευρωνικού δικτύου (MLP) που εκτελείται εξ ολοκλήρου στη συσκευή (on-device), σε εφαρμογή Flutter για κινητό, με προσομοίωση αισθητήρα CGM μέσω ESP32 και BLE.</li>
+                <li>Πειραματικό safety filtering: έλεγχος των προβλέψεων πριν από οποιαδήποτε προσομοιωμένη εντολή ινσουλίνης (αναστολή βασικού ρυθμού, bolus) — αποκλειστικά προσομοίωση, χωρίς πραγματική αντλία.</li>
+                <li>Αξιολόγηση σε πραγματικά κλινικά δεδομένα (OhioT1DM, δεδομένα ασθενούς): RMSE 32.25 mg/dL έναντι 38.36 mg/dL του persistence baseline (≈16% μείωση), με αποκλεισμό παραθύρων που εκτείνονται σε κενά μετρήσεων και ανάλυση κλινικής ακρίβειας μέσω error grid.</li>
             </ul>
         </div>
 
-        <div class="paper-card">
+        <div class="entry-block">
             <div class="paper-title">Machine Learning Framework for High-Dimensional Data</div>
             <div class="paper-status">Paper υπό συγγραφή</div>
-            <ul class="bullet-list">
-                <li><strong>Αντικείμενο:</strong> Αλγοριθμικό πλαίσιο Μηχανικής Μάθησης για ταξινόμηση υψηλοδιάστατων γονιδιοματικών δεδομένων (microarrays) σε 10 καρκινικούς τύπους, με επιτυγχανόμενο F1-Score > 0.89.</li>
-                <li><strong>Αρχιτεκτονική & Ερμηνευσιμότητα:</strong> Πολλαπλές τυχαίες προβολές (Random Projections) με ταξινομητές LDA και νευρωνικό meta-classifier, προσφέροντας αυτόματη αναγνώριση γονιδιακών βιοδεικτών.</li>
+            <ul class="cv-list">
+                <li>Αλγοριθμικό πλαίσιο Μηχανικής Μάθησης για ταξινόμηση υψηλοδιάστατων γονιδιοματικών δεδομένων (microarrays) σε 10 καρκινικούς τύπους, με F1-Score > 0.89.</li>
+                <li>Αρχιτεκτονική: πολλαπλές τυχαίες προβολές (Random Projections) με ταξινομητές LDA και νευρωνικό meta-classifier.</li>
+                <li>Ερμηνευσιμότητα: αυτόματη αναγνώριση γονιδιακών βιοδεικτών.</li>
             </ul>
         </div>
     </section>
 
-    <!-- ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ & Π
+    <!-- ΕΡΕΥΝΗΤΙΚΟ & ΕΚΠΑΙΔΕΥΤΙΚΟ ΠΕΡΙΒΑΛΛΟΝ -->
+    <section>
+        <h2 class="section-title">ΕΡΕΥΝΗΤΙΚΟ & ΕΚΠΑΙΔΕΥΤΙΚΟ ΠΕΡΙΒΑΛΛΟΝ</h2>
+        <ul class="cv-list">
+            <li>Μέλος Hermes Team (Kinematics & Control)</li>
+            <li>Εργαστήριο Ευφυών Υπολογιστικών Συστημάτων (ISL, 2023–σήμερα)</li>
+            <li>18th Conference – Hellenic Society for Computational Biology & Bioinformatics (HSCBB24, Οκτώβριος 2024)</li>
+            <li>Συμμετοχή σε project ενσωματωμένων συστημάτων και Τεχνητής Νοημοσύνης με ομάδα καθηγητών</li>
+            <li>Τρίμηνη εκπαίδευση προγραμματισμού: C, Java, Python (Καλοκαίρι 2022)</li>
+            <li>STEM Robotics Lab (2017–2020) | F1 in Schools – STEM Racing (2018–2019)</li>
+        </ul>
+    </section>
+
+    <!-- ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ & ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ -->
+    <section>
+        <h2 class="section-title">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ & ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ</h2>
+
+        <div class="entry-block">
+            <div class="entry-header">
+                <span class="entry-main">Genekor Medical S.A.</span>
+                <span class="entry-date">1 Ιουλίου – 31 Αυγούστου 2025</span>
+            </div>
+            <div class="entry-sub">Πρακτική Άσκηση</div>
+            <p style="font-size: 0.95rem; margin-bottom: 6px;">
+                Πρακτική άσκηση σε εταιρεία ιατρικών βιοδιαγνωστικών εφαρμογών, σε συνάφεια με το αντικείμενο σπουδών (Βιοϊατρική Πληροφορική-Βιοπληροφορική).
+            </p>
+            <ul class="cv-list">
+                <li>Ανάπτυξη συστήματος φιλτραρίσματος και ταξινόμησης γενετικών παραλλαγών BRCA1/2 βάσει των οδηγιών ACMG (PS1, PM5, PP5, BP6) και εμφάνιση αποτελεσμάτων μέσω API.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ΜΕΞΗ ΚΩΝΣΤΑΝΤΙΝΑ-ΗΛΙΑΝΑ — Hosted on GitHub Pages</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
