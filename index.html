@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Όνομα Επώνυμο | Ακαδημαϊκό & Ερευνητικό Προφίλ</title>
-    
-    <!-- Google Fonts for Academic Aesthetics -->
+    <title>Κωνσταντίνα-Ηλιάνα Μέξη | Βιοϊατρική Πληροφορική & AI</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
@@ -15,11 +15,11 @@
 
     <style>
         :root {
-            --primary: #1e293b;        /* Dark Slate */
+            --primary: #0f172a;        /* Deep Slate */
             --accent: #1d4ed8;         /* Academic Blue */
             --text: #334155;           /* Body Text */
             --text-light: #64748b;     /* Muted Text */
-            --bg: #f8fafc;             /* Subtle Grey BG */
+            --bg: #f8fafc;             /* Light BG */
             --card-bg: #ffffff;
             --border: #e2e8f0;
             --tag-bg: #f1f5f9;
@@ -37,7 +37,7 @@
         }
 
         .container {
-            max-width: 860px;
+            max-width: 880px;
             margin: 0 auto;
             background: var(--card-bg);
             padding: 50px 60px;
@@ -46,15 +46,10 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
-        /* Header / Hero Section */
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
             border-bottom: 2px solid var(--border);
             padding-bottom: 30px;
             margin-bottom: 35px;
-            gap: 20px;
         }
 
         .header-main h1 {
@@ -75,12 +70,21 @@
         .header-main .affiliation {
             font-size: 0.95rem;
             color: var(--text-light);
-            margin: 0 0 16px 0;
+            margin: 0 0 18px 0;
+        }
+
+        .contact-info {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .social-links {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
@@ -88,7 +92,7 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            padding: 6px 14px;
+            padding: 7px 14px;
             border-radius: 4px;
             background: var(--tag-bg);
             color: var(--primary);
@@ -114,7 +118,6 @@
             background: #1e40af;
         }
 
-        /* Typography & Headings */
         h2 {
             font-family: 'Merriweather', serif;
             font-size: 1.35rem;
@@ -122,7 +125,7 @@
             border-bottom: 1px solid var(--border);
             padding-bottom: 8px;
             margin-top: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -133,7 +136,6 @@
             color: var(--accent);
         }
 
-        /* Timelines & Items */
         .item {
             margin-bottom: 24px;
         }
@@ -172,17 +174,21 @@
 
         /* Publications Styling */
         .pub-item {
-            padding: 16px;
+            padding: 16px 20px;
             border-left: 3px solid var(--accent);
             background: #fafafa;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             border-radius: 0 6px 6px 0;
+            border-top: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
 
         .pub-title {
             font-weight: 600;
             color: var(--primary);
             margin-bottom: 4px;
+            font-size: 1rem;
         }
 
         .pub-authors {
@@ -203,40 +209,20 @@
             margin-bottom: 8px;
         }
 
-        .pub-links {
-            display: flex;
-            gap: 8px;
-        }
-
-        .pub-badge {
-            font-size: 0.78rem;
-            padding: 2px 8px;
-            border-radius: 3px;
-            background: #ffffff;
-            border: 1px solid var(--border);
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .pub-badge:hover {
-            background: var(--accent);
-            color: #ffffff;
-        }
-
-        /* Tags / Badges for Skills */
-        .skills-container {
+        /* Skills Layout */
+        .skills-grid {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 16px;
         }
 
         .skill-group-title {
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin-bottom: 6px;
         }
 
         .tag-list {
@@ -255,7 +241,6 @@
             border: 1px solid var(--border);
         }
 
-        /* Footer */
         footer {
             margin-top: 50px;
             padding-top: 20px;
@@ -267,7 +252,6 @@
 
         @media (max-width: 640px) {
             .container { padding: 30px 20px; }
-            header { flex-direction: column; }
             .item-header { flex-direction: column; }
         }
     </style>
@@ -276,147 +260,204 @@
 
 <div class="container">
 
-    <!-- HERO HEADER -->
+    <!-- HEADER / HERO -->
     <header>
         <div class="header-main">
-            <h1>Όνομα Επώνυμο</h1>
-            <p class="title">Υποψήφια Διδάκτωρ / Ερευνήτρια Τεχνητής Νοημοσύνης</p>
+            <h1>Κωνσταντίνα-Ηλιάνα Μέξη</h1>
+            <p class="title">Ερευνήτρια Βιοϊατρικής Πληροφορικής & Τεχνητής Νοημοσύνης</p>
             <p class="affiliation">Τμήμα Πληροφορικής με Εφαρμογές στη Βιοϊατρική — Πανεπιστήμιο Θεσσαλίας</p>
             
+            <div class="contact-info">
+                <span><i class="fa-solid fa-location-dot"></i> Μαραθώνας, Αττική</span>
+                <span><i class="fa-solid fa-phone"></i> +30 6986823602</span>
+            </div>
+
             <div class="social-links">
-                <a href="cv.pdf" class="btn-link btn-cv" target="_blank">
+                <a href="CV_Mexi_.pdf" class="btn-link btn-cv" target="_blank">
                     <i class="fa-solid fa-file-pdf"></i> Download CV (PDF)
                 </a>
-                <a href="mailto:email@example.com" class="btn-link">
-                    <i class="fa-solid fa-envelope"></i> Email
-                </a>
-                <a href="https://github.com/username" target="_blank" class="btn-link">
+                <a href="https://github.com/ilianamexi" target="_blank" class="btn-link">
                     <i class="fa-brands fa-github"></i> GitHub
                 </a>
-                <a href="https://linkedin.com/in/username" target="_blank" class="btn-link">
+                <a href="https://linkedin.com" target="_blank" class="btn-link">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://scholar.google.com" target="_blank" class="btn-link">
-                    <i class="fa-solid fa-graduation-cap"></i> Google Scholar
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- RESEARCH INTERESTS / PROFILE -->
+    <!-- RESEARCH OVERVIEW -->
     <section>
-        <h2><i class="fa-solid fa-flask"></i> Ερευνητικά Ενδιαφέροντα</h2>
+        <h2><i class="fa-solid fa-flask"></i> Ερευνητικό Προφίλ</h2>
         <p class="item-desc">
-            Η έρευνά μου επικεντρώνεται στην εφαρμογή αλγορίθμων <strong>Machine Learning & Edge AI</strong> στη Βιοϊατρική, με έμφαση σε συστήματα Medical IoT, επεξεργασία βιοϊατρικών σημάτων και Ensemble Classification models χαμηλής υπολογιστικής κατανάλωσης.
+            Εξειδικεύομαι στην εφαρμογή αλγορίθμων <strong>Machine Learning & Edge AI</strong> σε Βιοϊατρικά Δεδομένα και Ιατρική Απεικόνιση. Το ερευνητικό μου έργο επικεντρώνεται στην ανάπτυξη μοντέλων τεχνητής νοημοσύνης χαμηλής υπολογιστικής κατανάλωσης (On-Device Inference) για συστήματα συνεχούς μέτρησης γλυκόζης (CGM), στην ταξινόμηση γονιδιωματικών δεδομένων υψηλής διαστατικότητας και στην ανάλυση ιατρικών εικόνων (DICOM, Computer Vision).
         </p>
+    </section>
+
+    <!-- RESEARCH & PUBLICATIONS -->
+    <section>
+        <h2><i class="fa-solid fa-book-bookmark"></i> Ερευνητική Δραστηριότητα & Δημοσιεύσεις</h2>
+
+        <div class="pub-item">
+            <div class="pub-title">On-Device Edge AI for Real-Time Glucose Forecasting and Experimental Safety Filtering in T1D</div>
+            <div class="pub-authors"><span class="me">Κωνσταντίνα-Ηλιάνα Μέξη</span>, κ.ά.</div>
+            <div class="pub-venue">Υποβλήθηκε στο Medical Informatics Europe (MIE 2027)</div>
+            <p class="item-desc" style="font-size: 0.9rem; margin-top: 6px;">
+                Πρόβλεψη γλυκόζης 60 λεπτών με μοντέλο MLP εξ ολοκλήρου στη συσκευή (Flutter app), προσομοίωση αισθητήρα CGM μέσω ESP32/BLE και πειραματικό safety filtering σε κλινικά δεδομένα OhioT1DM (RMSE 32.25 mg/dL, ~16% βελτίωση από το baseline).
+            </p>
+        </div>
+
+        <div class="pub-item">
+            <div class="pub-title">Machine Learning Framework for High-Dimensional Genomic Data Classification</div>
+            <div class="pub-authors"><span class="me">Κωνσταντίνα-Ηλιάνα Μέξη</span>, κ.ά.</div>
+            <div class="pub-venue">Paper υπό συγγραφή</div>
+            <p class="item-desc" style="font-size: 0.9rem; margin-top: 6px;">
+                Αλγοριθμικό πλαίσιο για ταξινόμηση γονιδιωματικών δεδομένων (microarrays) σε 10 καρκινικούς τύπους με F1-Score > 0.89. Αρχιτεκτονική με Random Projections, ταξινομητές LDA και νευρωνικό meta-classifier για αυτόματη αναγνώριση βιοδεικτών.
+            </p>
+        </div>
     </section>
 
     <!-- EDUCATION -->
     <section>
-        <h2><i class="fa-solid fa-graduation-cap"></i> Εκπαίδευση</h2>
+        <h2><i class="fa-solid fa-graduation-cap"></i> Σπουδές</h2>
         
         <div class="item">
             <div class="item-header">
                 <span class="item-title">Μεταπτυχιακό Δίπλωμα Ειδίκευσης (MSc)</span>
-                <span class="item-date">2024 – 2026</span>
+                <span class="item-date">Πανεπιστήμιο Θεσσαλίας</span>
             </div>
-            <div class="item-sub">Πληροφορική και Υπολογιστική Βιοϊατρική (Υπολογιστική Ιατρική & Βιολογία)</div>
-            <p class="item-desc">Πανεπιστήμιο Θεσσαλίας. Εξειδίκευση σε αλγορίθμους μηχανικής μάθησης και ανάλυση ιατρικών δεδομένων μεγάλης κλίμακας.</p>
+            <div class="item-sub">Πληροφορική και Υπολογιστική Βιοϊατρική — Κατεύθυνση: Υπολογιστική Ιατρική και Βιολογία</div>
         </div>
 
         <div class="item">
             <div class="item-header">
                 <span class="item-title">Πτυχίο Πληροφορικής με Εφαρμογές στη Βιοϊατρική (BSc)</span>
-                <span class="item-date">2020 – 2024</span>
+                <span class="item-date">Πανεπιστήμιο Θεσσαλίας</span>
             </div>
-            <div class="item-sub">Πανεπιστήμιο Θεσσαλίας</div>
-            <p class="item-desc">Διπλωματική Εργασία: <em>"Σχεδιασμός και ανάπτυξη φορητού συστήματος Edge AI για συνεχή παρακολούθηση βιοσήματος μέσω BLE"</em>.</p>
+            <div class="item-sub">Ανοιχτές Κατευθύνσεις: Τεχνητή Νοημοσύνη, Ρομποτικά Συστήματα, Βιοπληροφορική</div>
+            <p class="item-desc">
+                <strong>Πτυχιακή Εργασία:</strong> <em>"Continuous Glucose Monitoring (CGM) με Χρήση Τεχνητής Νοημοσύνης και Mobile App"</em> — Ανάπτυξη ολοκληρωμένου συστήματος μέτρησης γλυκόζης με ενσωμάτωση αλγορίθμων AI για πρόβλεψη και ανάλυση μετρήσεων μέσω mobile εφαρμογής.
+            </p>
         </div>
     </section>
 
-    <!-- PUBLICATIONS -->
+    <!-- PROFESSIONAL EXPERIENCE -->
     <section>
-        <h2><i class="fa-solid fa-book-bookmark"></i> Δημοσιεύσεις & Papers</h2>
-
-        <div class="pub-item">
-            <div class="pub-title">Edge AI Framework for Real-Time Biomedical Signal Classification on Embedded Mobile Devices</div>
-            <div class="pub-authors"><span class="me">E. Surname</span>, A. Professor, B. Collaborator</div>
-            <div class="pub-venue">Medical Informatics Europe (MIE 2027) / IOS Press</div>
-            <div class="pub-links">
-                <a href="#" class="pub-badge">[PDF]</a>
-                <a href="#" class="pub-badge">[DOI]</a>
-                <a href="#" class="pub-badge">[Code Repository]</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SELECTED PROJECTS -->
-    <section>
-        <h2><i class="fa-solid fa-code"></i> Ερευνητικά Projects & Κώδικας</h2>
+        <h2><i class="fa-solid fa-briefcase"></i> Επαγγελματική Εμπειρία & Πρακτική Άσκηση</h2>
 
         <div class="item">
             <div class="item-header">
-                <span class="item-title">LDA Stacking Meta-Learner Architecture</span>
-                <span class="item-date">Python / scikit-learn</span>
+                <span class="item-title">Genekor Medical S.A.</span>
+                <span class="item-date">Ιούλιος 2025 – Αύγουστος 2025</span>
+            </div>
+            <div class="item-sub">Πρακτική Άσκηση — Βιοϊατρική Πληροφορική & Βιοπληροφορική</div>
+            <p class="item-desc">
+                Σχεδιασμός και ανάπτυξη συστήματος φιλτραρίσματος και ταξινόμησης γενετικών παραλλαγών <strong>BRCA1/2</strong> βάσει των διεθνών οδηγιών ACMG (PS1, PM5, PP5, BP6) και παροχή αποτελεσμάτων μέσω REST API.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+        <h2><i class="fa-solid fa-diagram-project"></i> Projects & Ερευνητικά Εργαστήρια</h2>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Computer Vision & Medical Imaging Applications</span>
+                <span class="item-date">MATLAB & Python</span>
             </div>
             <p class="item-desc">
-                Αρχιτεκτονική Stacking Ensemble Classifier που αξιολογεί μεθόδους επιλογής υποχώρου (mRMR, Sparse L1) σε microarray γονιδιακά δεδομένα.
+                • <strong>Segmentation Κυτταρικών Πυρήνων:</strong> Τμηματοποίηση εικόνων μικροσκοπίας με watershed transform και εξαγωγή μορφομετρικών χαρακτηριστικών.<br>
+                • <strong>Καταχώρηση Ιατρικών Εικόνων:</strong> Affine ευθυγράμμιση αμφιβληστροειδικών εικόνων (Correlation Coefficient & Mutual Information).<br>
+                • <strong>Ανάλυση Δυναμικού Νεφρογραφήματος (DICOM):</strong> Εξαγωγή μεταδεδομένων και υπολογισμός καμπυλών ενεργότητας νεφρών με διόρθωση υποβάθρου.<br>
+                • <strong>Ποιοτικός Έλεγχος γ-Κάμερας:</strong> Υπολογισμός Modulation Transfer Function (MTF) και ανομοιογένειας πεδίου.
             </p>
         </div>
 
         <div class="item">
             <div class="item-header">
-                <span class="item-title">Edge AI Medical Monitor App</span>
-                <span class="item-date">Flutter / Dart / TensorFlow Lite</span>
+                <span class="item-title">Data Science & Deep Learning Pipelines</span>
+                <span class="item-date">Python</span>
             </div>
             <p class="item-desc">
-                Mobile εφαρμογή πραγματικού χρόνου που λαμβάνει δεδομένα μέσω Bluetooth Low Energy (BLE) από μικροελεγκτή ESP32 και εκτελεί τοπικά MLP μοντέλα πρόβλεψης.
+                • <strong>Πρόβλεψη Σταδίου Ηπατίτιδας C:</strong> Multi-class classification (5 στάδια) με Random Forest, SMOTE imputation και pandas/scikit-learn.<br>
+                • <strong>Ταξινόμηση Γονιδιακών Δεδομένων:</strong> Συγκριτική αξιολόγηση Random Forest, SMV-MRPV και NNV-MRPV σε ιατρικά datasets γονιδιακής έκφρασης (leukemia, colon, prostate).
+            </p>
+        </div>
+
+        <div class="item">
+            <div class="item-header">
+                <span class="item-title">Hermes Team & Εργαστήριο Ευφυών Υπολογιστικών Συστημάτων (ISL)</span>
+                <span class="item-date">2023 – Σήμερα</span>
+            </div>
+            <p class="item-desc">
+                Μέλος της ομάδας Hermes (Kinematics & Control) και συμμετοχή σε ερευνητικά projects ενσωματωμένων συστημάτων και Τεχνητής Νοημοσύνης.
             </p>
         </div>
     </section>
 
     <!-- TECHNICAL SKILLS -->
     <section>
-        <h2><i class="fa-solid fa-gears"></i> Τεχνικές Δεξιότητες</h2>
+        <h2><i class="fa-solid fa-code"></i> Τεχνικές Δεξιότητες</h2>
         
-        <div class="skills-container">
+        <div class="skills-grid">
             <div>
-                <div class="skill-group-title">Γλώσσες & Machine Learning</div>
+                <div class="skill-group-title">Γλώσσες Προγραμματισμού</div>
                 <div class="tag-list">
                     <span class="tag">Python</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">MATLAB</span>
+                    <span class="tag">C / C++</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Dart</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+
+            <div>
+                <div class="skill-group-title">Τεχνητή Νοημοσύνη & Machine Learning</div>
+                <div class="tag-list">
                     <span class="tag">scikit-learn</span>
                     <span class="tag">TensorFlow / Keras</span>
-                    <span class="tag">pandas</span>
-                    <span class="tag">NumPy</span>
-                    <span class="tag">imbalanced-learn</span>
+                    <span class="tag">Neural Networks (MLP, CNN)</span>
+                    <span class="tag">Random Forest</span>
+                    <span class="tag">LDA</span>
+                    <span class="tag">Random Projections</span>
+                    <span class="tag">SMOTE</span>
+                    <span class="tag">Edge AI / On-Device Inference</span>
                 </div>
             </div>
 
-            <div style="margin-top: 10px;">
-                <div class="skill-group-title">Mobile & Embedded Technologies</div>
+            <div>
+                <div class="skill-group-title">Βιοϊατρικά Δεδομένα & Ιατρική Απεικόνιση</div>
                 <div class="tag-list">
-                    <span class="tag">Flutter / Dart</span>
-                    <span class="tag">Bluetooth Low Energy (BLE)</span>
-                    <span class="tag">ESP32 Systems</span>
-                    <span class="tag">Edge AI / TFLite</span>
+                    <span class="tag">DICOM</span>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Image Segmentation</span>
+                    <span class="tag">Image Registration</span>
+                    <span class="tag">Microarrays / Gene Expression</span>
+                    <span class="tag">CGM Data</span>
                 </div>
             </div>
 
-            <div style="margin-top: 10px;">
-                <div class="skill-group-title">Εργαλεία & Έρευνα</div>
+            <div>
+                <div class="skill-group-title">Mobile, Embedded & Εργαλεία</div>
                 <div class="tag-list">
-                    <span class="tag">Git / GitHub</span>
-                    <span class="tag">Linux / Bash</span>
+                    <span class="tag">Flutter</span>
+                    <span class="tag">ESP32</span>
+                    <span class="tag">BLE (Bluetooth Low Energy)</span>
+                    <span class="tag">Arduino</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Linux</span>
                     <span class="tag">LaTeX</span>
-                    <span class="tag">SPSS</span>
-                    <span class="tag">CUDA / Cloud GPUs</span>
+                    <span class="tag">Git / GitHub</span>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Όνομα Επώνυμο — Hosted on GitHub Pages</p>
+        <p>© 2026 Κωνσταντίνα-Ηλιάνα Μέξη — Hosted on GitHub Pages</p>
     </footer>
 
 </div>
