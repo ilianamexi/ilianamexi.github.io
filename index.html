@@ -366,3 +366,82 @@
 
         <div class="subsection-title">Υπολογιστική Όραση</div>
         <ul class="cv-list">
+            <li><strong>Μοντελοποίηση Pinhole Camera</strong> — Κατασκευή extrinsic camera matrix και προβολή 3D σημείων mesh σε 2D εικόνα (MATLAB).</li>
+            <li><strong>Segmentation Κυτταρικών Πυρήνων</strong> — Τμηματοποίηση εικόνων μικροσκοπίας με watershed transform και εξαγωγή μορφομετρικών χαρακτηριστικών (εμβαδόν, περίμετρος, συμμετρία) (MATLAB).</li>
+            <li><strong>Καταχώρηση Ιατρικών Εικόνων (Image Registration)</strong> — Affine ευθυγράμμιση ζευγών αμφιβληστροειδικών εικόνων με ground-truth ομόλογα σημεία, αξιολόγηση με correlation coefficient & mutual information (MATLAB).</li>
+            <li><strong>Ταξινόμηση Εικόνων με CNN</strong> — Fine-tuning προεκπαιδευμένων δικτύων (AlexNet/VGG16) στο dataset CALTECH101, με ανάλυση confusion matrix και hyperparameters.</li>
+        </ul>
+
+        <div class="subsection-title">Συστήματα Ιατρικής Απεικόνισης</div>
+        <ul class="cv-list">
+            <li><strong>Ποιοτικός Έλεγχος γ-Κάμερας (MTF & Homogeneity)</strong> — Μέτρηση Modulation Transfer Function από εικόνες quadrant phantom και υπολογισμός ανομοιογένειας πεδίου (field uniformity) γ-κάμερας (Python).</li>
+            <li><strong>Ανάλυση Δυναμικού Νεφρογραφήματος (DICOM)</strong> — Εξαγωγή μεταδεδομένων DICOM (ραδιοϊσότοπο, energy window, πλήθος frames) και υπολογισμός καμπυλών ενεργότητας νεφρών (ROI-based) με διόρθωση υποβάθρου, σε anterior/posterior λήψεις (Python).</li>
+            <li><strong>Προσομοίωση Ραδιογραφικής Εικόνας</strong> — Μοντελοποίηση σχηματισμού ακτινογραφίας μέσω εξασθένησης ακτίνων X (νόμος Beer-Lambert) σε ετερογενές αντικείμενο, με προσομοίωση θορύβου Poisson σε διαφορετικά επίπεδα φωτονικής ροής (Python).</li>
+        </ul>
+    </section>
+
+    <!-- ΕΡΕΥΝΗΤΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ & ΔΗΜΟΣΙΕΥΣΕΙΣ -->
+    <section>
+        <h2 class="section-title">ΕΡΕΥΝΗΤΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ & ΔΗΜΟΣΙΕΥΣΕΙΣ</h2>
+
+        <div class="entry-block">
+            <div class="paper-title">On-Device Edge AI for Real-Time Glucose Forecasting and Experimental Safety Filtering in T1D</div>
+            <div class="paper-status">Υποβλήθηκε στο MIE 2027 (Medical Informatics Europe)</div>
+            <ul class="cv-list">
+                <li>Πρόβλεψη γλυκόζης 60 λεπτών (12 βήματα): μοντέλο νευρωνικού δικτύου (MLP) που εκτελείται εξ ολοκλήρου στη συσκευή (on-device), σε εφαρμογή Flutter για κινητό, με προσομοίωση αισθητήρα CGM μέσω ESP32 και BLE.</li>
+                <li>Πειραματικό safety filtering: έλεγχος των προβλέψεων πριν από οποιαδήποτε προσομοιωμένη εντολή ινσουλίνης (αναστολή βασικού ρυθμού, bolus) — αποκλειστικά προσομοίωση, χωρίς πραγματική αντλία.</li>
+                <li>Αξιολόγηση σε πραγματικά κλινικά δεδομένα (OhioT1DM, δεδομένα ασθενούς): RMSE 32.25 mg/dL έναντι 38.36 mg/dL του persistence baseline (≈16% μείωση), με αποκλεισμό παραθύρων που εκτείνονται σε κενά μετρήσεων και ανάλυση κλινικής ακρίβειας μέσω error grid.</li>
+            </ul>
+        </div>
+
+        <div class="entry-block">
+            <div class="paper-title">Machine Learning Framework for High-Dimensional Data</div>
+            <div class="paper-status">Paper υπό συγγραφή</div>
+            <ul class="cv-list">
+                <li>Αλγοριθμικό πλαίσιο Μηχανικής Μάθησης για ταξινόμηση υψηλοδιάστατων γονιδιοματικών δεδομένων (microarrays) σε 10 καρκινικούς τύπους, με F1-Score > 0.89.</li>
+                <li>Αρχιτεκτονική: πολλαπλές τυχαίες προβολές (Random Projections) με ταξινομητές LDA και νευρωνικό meta-classifier.</li>
+                <li>Ερμηνευσιμότητα: αυτόματη αναγνώριση γονιδιακών βιοδεικτών.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ΕΡΕΥΝΗΤΙΚΟ & ΕΚΠΑΙΔΕΥΤΙΚΟ ΠΕΡΙΒΑΛΛΟΝ -->
+    <section>
+        <h2 class="section-title">ΕΡΕΥΝΗΤΙΚΟ & ΕΚΠΑΙΔΕΥΤΙΚΟ ΠΕΡΙΒΑΛΛΟΝ</h2>
+        <ul class="cv-list">
+            <li>Μέλος Hermes Team (Kinematics & Control)</li>
+            <li>Εργαστήριο Ευφυών Υπολογιστικών Συστημάτων (ISL, 2023–σήμερα)</li>
+            <li>18th Conference – Hellenic Society for Computational Biology & Bioinformatics (HSCBB24, Οκτώβριος 2024)</li>
+            <li>Συμμετοχή σε project ενσωματωμένων συστημάτων και Τεχνητής Νοημοσύνης με ομάδα καθηγητών</li>
+            <li>Τρίμηνη εκπαίδευση προγραμματισμού: C, Java, Python (Καλοκαίρι 2022)</li>
+            <li>STEM Robotics Lab (2017–2020) | F1 in Schools – STEM Racing (2018–2019)</li>
+        </ul>
+    </section>
+
+    <!-- ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ & ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ -->
+    <section>
+        <h2 class="section-title">ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ & ΠΡΑΚΤΙΚΗ ΑΣΚΗΣΗ</h2>
+
+        <div class="entry-block">
+            <div class="entry-header">
+                <span class="entry-main">Genekor Medical S.A.</span>
+                <span class="entry-date">1 Ιουλίου – 31 Αυγούστου 2025</span>
+            </div>
+            <div class="entry-sub">Πρακτική Άσκηση</div>
+            <p style="font-size: 0.95rem; margin-bottom: 6px;">
+                Πρακτική άσκηση σε εταιρεία ιατρικών βιοδιαγνωστικών εφαρμογών, σε συνάφεια με το αντικείμενο σπουδών (Βιοϊατρική Πληροφορική-Βιοπληροφορική).
+            </p>
+            <ul class="cv-list">
+                <li>Ανάπτυξη συστήματος φιλτραρίσματος και ταξινόμησης γενετικών παραλλαγών BRCA1/2 βάσει των οδηγιών ACMG (PS1, PM5, PP5, BP6) και εμφάνιση αποτελεσμάτων μέσω API.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ΜΕΞΗ ΚΩΝΣΤΑΝΤΙΝΑ-ΗΛΙΑΝΑ — Hosted on GitHub Pages</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
